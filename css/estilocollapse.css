@@ -24,6 +24,11 @@ header {
     var(--color-header);
 }
 
+.logocollapse{
+    display: flex;
+    justify-content: center;
+}
+
 .herramientas {
   display: flex;
   flex-flow: wrap;
