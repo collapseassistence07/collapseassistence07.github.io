@@ -1,12 +1,12 @@
 @import "mi-nav.css";
 @import "mi-footer.css";
-@import "listas.css";
+@import "listacollapse.css";
 
 :root {
-  font-family: sans-serif;
-  --col-active: #4646462c;
-  --color-header: white;
-  --colorMiNav: white;
+  font-family: "Nunito";
+  --col-active: #1e1e20;
+  --color-header: #1e1e20;
+  --colorMiNav: #1e1e20;
 }
 
 body {
