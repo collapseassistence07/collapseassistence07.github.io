@@ -1,77 +1,90 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>CollapseAssistence</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/estilocollapse.css">
-    <link rel="icon" href="icon/collapse_icon.ico.ico">
-    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js">
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width,
+       initial-scale=1.0">
+  <title>Sesión</title>
+  <!--
+    Carga el núcleo de Firebase
+    JS SDK
+  -->
+  <script
+    src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js">
     </script>
-    <script src="js/init.js"></script>
-  </head>
-  <body>
+  <!--
+    Agrega el manejo de
+    autenticación.
+  -->
+  <script
+    src="https://www.gstatic.com/firebasejs/8.5.0/firebase-auth.js">
+    </script>
+  <!--
+    Agrega el manejo de bases de
+    datos.
+  -->
+  <script
+    src="https://www.gstatic.com/firebasejs/8.5.0/firebase-firestore.js">
+    </script>
+  <!--
+    Configura la app usando la
+    información del sitio de
+    Firebase.
+  -->
+  <script src="js/init.js">
+  </script>
+  <script type="module"
+    src="cmp/mi-nav.js">
+    </script>
+  <script type="module"
+    src="cmp/mi-footer.js">
+    </script>
+  <script type="module"
+    src="cmp/mi-progreso.js">
+    </script>
+  <link rel="stylesheet"
+    href="css/estilos.css">
+</head>
+<body>
+  <form name="forma">
+    <mi-nav></mi-nav>
     <header>
-        <h1>Autentificacion
-        </h1>
-     <div class="logocollapse">
-         <img src="logo/logo.png" width="150"alt="">
-        </div>
-      <h1>Sesion</h1>
-      <fieldset>
-          <legend>Email</legend>
-          <output id="email"><progress max="100">Procesando</progress></output>
-      </fieldset>
-
-      <fieldset>
-          <legend>Nombre</legend>
-          <output id="nombre"></output>
-      </fieldset>
-
-      <figure>
-          <img id="avatar" alt="Avatar">
-      </figure>
-
-      <button type="button" onClick="terminaSesion()">Terminar sesion</button>
-    <footer>
-      Copyright 2021 Andrade V. Jose Miguel
-    </footer>
-    <script>
-        //Conexion al sistema Auth de Firebase
-        const auth = firebase.auth();
-        //Tipo de auth de usuarios, en este caso de Google
-        const provider = new  firebase.auth.GoogleAuthProvider();
-        //Configura el provedor seleccionado (Google) para ser seleccionadod e una lista
-        provider.setCustomParameters({ prompt: "select_account" });
-        auth.onAuthStateChanged(
-            usuarioAuth =>{
-                if(usuarioAuth && usuarioAuth.email){
-                //usuario ACEPTADO
-                    email.value = usuarioAuth.email;
-                    nombre.value = usuarioAuth.displayName;
-                    avatar.src = usuarioAuth.photoURL;
-                }else{
-                    //No aceptado, no inicio sesion
-                    auth.signInWithRedirect(provider);
-                }
-            },
-            procesaError
-        );
-
-       async function terminaSesion(){
-           try{
-               await auth.signOut();
-           }catch (e){
-                procesaError(e);
-           }
-       }
-
-       function procesaError(e){
-           console.log(e);
-           alert(e.message);
-       }
+      <h1>Sesión</h1>
+      <div class="herramientas">
+        <button
+          type="button"
+          name="terminarSesión">
+          Terminar Sesión
+        </button>
+      </div>
+    </header>
+    <figure>
+      <img id="avatar" src=""
+        alt="Avatar">
+    </figure>
+    <p>
+      <label>
+        Email
+        <output name="email">
+          <mi-progreso>
+          </mi-progreso>
+        </output>
+      </label>
+    </p>
+    <p>
+      <label>
+        Nombre
+        <output name="nombre">
+          <mi-progreso>
+          </mi-progreso>
+        </output>
+      </label>
+    </p>
+    <mi-footer></mi-footer>
+  </form>
+  <script type="module"
+    src="js/CtrlSesion.js">
     </script>
-  </body>
+</body>
 </html>
-//prueba
