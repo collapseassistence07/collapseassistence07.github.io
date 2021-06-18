@@ -13,6 +13,7 @@ body {
   max-width: 640px;
   margin: 0 auto;
   padding: 0.5rem;
+  background-color:#1e1e20; color: aliceblue;
 }
 
 header {
@@ -40,6 +41,7 @@ header input {
 
 h1 {
   margin: 0.5rem 0;
+  color:#9b4bc1;
 }
 
 figure img {
