@@ -6,7 +6,7 @@
     content="width=device-width,
        initial-scale=1.0">
   <link rel="icon" href="icon/collapse_icon.ico.ico">
-  <title>Usuario</title>
+  <title>Pasatiempo</title>
   <script
     src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js">
     </script>
@@ -16,9 +16,6 @@
   <script
     src="https://www.gstatic.com/firebasejs/8.5.0/firebase-firestore.js">
     </script>
-  <script
-    src="https://www.gstatic.com/firebasejs/8.5.0/firebase-storage.js">
-    </script>
   <script src="js/init.js">
   </script>
   <script type="module"
@@ -26,9 +23,6 @@
     </script>
   <script type="module"
     src="cmp/mi-footer.js">
-    </script>
-  <script type="module"
-    src="cmp/mi-progreso.js">
     </script>
   <link rel="stylesheet"
     href="css/estilocollapse.css">
@@ -40,13 +34,7 @@
       <img src="logo/logo.png" width="150"alt="">
      </div>
     <header>
-      <h1>
-        <output name="cue">
-          Usuario
-          <mi-progreso>
-          </mi-progreso>
-        </output>
-      </h1>
+      <h1>Foro de dudas de curso</h1>
       <div class="herramientas">
         <a href="materias.html">
           Cancelar</a>
@@ -57,49 +45,18 @@
         </button>
       </div>
     </header>
-    <figure id="figure">
-      <img alt="Falta el Avatar">
-    </figure>
     <p>
       <label>
-        Avatar
-        <input name="avatar"
-          type="file"
-          accept=".png,.jpg,.jpeg,.gif">
+        Nombre
+        <input name="nombre"
+          type="text" required
+          value="Cargando…">
       </label>
     </p>
-    <!--
-      Maneja una asociación a uno.
-    -->
-    <p>
-      <label>
-        Pasatiempo
-        <select
-          name="pasatiempoId">
-          <option>
-            Cargando…
-          </option>
-        </select>
-      </label>
-    </p>
-    <!--
-      Maneja una asociación a
-      muchos.
-    -->
-    <fieldset>
-      <legend>Roles</legend>
-      <ul id="listaRoles"
-        class="checks">
-        <li>
-          <mi-progreso>
-          </mi-progreso>
-        </li>
-      </ul>
-    </fieldset>
     <mi-footer></mi-footer>
   </form>
   <script type="module"
-    src="js/CtrlUsuario.js">
+    src="js/CtrlPasatiempo.js">
     </script>
 </body>
 </html>

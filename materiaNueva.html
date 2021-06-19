@@ -6,19 +6,15 @@
     content="width=device-width,
        initial-scale=1.0">
   <link rel="icon" href="icon/collapse_icon.ico.ico">
-  <title>Usuario Nuevo</title>
+  <title>
+    Duda nueva
+  </title>
   <script
-    src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js">
-    </script>
+    src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
   <script
-    src="https://www.gstatic.com/firebasejs/8.5.0/firebase-auth.js">
-    </script>
+    src="https://www.gstatic.com/firebasejs/8.5.0/firebase-auth.js"></script>
   <script
-    src="https://www.gstatic.com/firebasejs/8.5.0/firebase-firestore.js">
-    </script>
-  <script
-    src="https://www.gstatic.com/firebasejs/8.5.0/firebase-storage.js">
-    </script>
+    src="https://www.gstatic.com/firebasejs/8.5.0/firebase-firestore.js"></script>
   <script src="js/init.js">
   </script>
   <script type="module"
@@ -26,9 +22,6 @@
     </script>
   <script type="module"
     src="cmp/mi-footer.js">
-    </script>
-  <script type="module"
-    src="cmp/mi-progreso.js">
     </script>
   <link rel="stylesheet"
     href="css/estilocollapse.css">
@@ -40,9 +33,10 @@
       <img src="logo/logo.png" width="150"alt="">
      </div>
     <header>
-      <h1>Usuario Nuevo</h1>
+      <h1>Publica tu duda</h1>
       <div class="herramientas">
-        <a href="materias.html">
+        <a
+          href="materias.html">
           Cancelar</a>
         <button type="submit">
           Guardar
@@ -51,51 +45,15 @@
     </header>
     <p>
       <label>
-        Cue
-        <input name="cue"
-          type="email" required>
+        Nombre
+        <input name="nombre"
+          type="text" required>
       </label>
     </p>
-    <p>
-      <label>
-        Avatar
-        <input name="avatar"
-          type="file" required
-          accept=".png,.jpg,.jpeg,.gif">
-      </label>
-    </p>
-    <!--
-      Maneja una asociación a uno.
-    -->
-    <p>
-      <label>
-        Pasatiempo
-        <select
-          name="materiaId">
-          <option>
-            Cargando…
-          </option>
-        </select>
-      </label>
-    </p>
-    <!--
-      Maneja una asociación a
-      muchos.
-    -->
-    <fieldset>
-      <legend>Roles</legend>
-      <ul id="listaRoles"
-        class="checks">
-        <li>
-          <mi-progreso>
-          </mi-progreso>
-        </li>
-      </ul>
-    </fieldset>
     <mi-footer></mi-footer>
   </form>
   <script type="module"
-    src="js/CtrlUsuarioNuevo.js">
+    src="js/CtrlPasatiempoNuevo.js">
     </script>
 </body>
 </html>
