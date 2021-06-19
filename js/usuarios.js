@@ -147,7 +147,7 @@ export async function
     id) {
   try {
     evt.preventDefault();
-    const pasatiempoId =
+    const materiaId =
       getForánea(formData,
         "materiaId");
     const rolIds =
@@ -155,7 +155,7 @@ export async function
     await daoUsuario.
       doc(id).
       set({
-        pasatiempoId,
+        materiaId,
         rolIds
       });
     const avatar =
