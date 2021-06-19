@@ -13,7 +13,7 @@ import {
 
 const SIN_PASATIEMPO = /* html */
   `<option value="">
-    -- Sin Pasatiempo --
+    -- Sin Materia --
   </option>`;
 
 const firestore = getFirestore();
