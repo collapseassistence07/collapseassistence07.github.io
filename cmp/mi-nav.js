@@ -56,7 +56,7 @@ import {
             </li>
             <li>
               <a href=
-        "publicaciones.html">Publicaciones</a>
+  "publicaciones.html">Publicaciones</a>
             </li>`;
         }
         this.ul.innerHTML += html;
