@@ -6,15 +6,16 @@
     content="width=device-width,
        initial-scale=1.0">
   <link rel="icon" href="icon/collapse_icon.ico.ico">
-  <title>
-    Duda nueva
-  </title>
+  <title>Pasatiempo</title>
   <script
-    src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+    src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js">
+    </script>
   <script
-    src="https://www.gstatic.com/firebasejs/8.5.0/firebase-auth.js"></script>
+    src="https://www.gstatic.com/firebasejs/8.5.0/firebase-auth.js">
+    </script>
   <script
-    src="https://www.gstatic.com/firebasejs/8.5.0/firebase-firestore.js"></script>
+    src="https://www.gstatic.com/firebasejs/8.5.0/firebase-firestore.js">
+    </script>
   <script src="js/init.js">
   </script>
   <script type="module"
@@ -33,13 +34,14 @@
       <img src="logo/logo.png" width="150"alt="">
      </div>
     <header>
-      <h1>Publica tu duda</h1>
+      <h1>Foro de dudas de curso</h1>
       <div class="herramientas">
-        <a
-          href="pasatiempos.html">
+        <a href="publicaciones.html">
           Cancelar</a>
-        <button type="submit">
-          Guardar
+        <button>Guardar</button>
+        <button name="eliminar"
+          type="button">
+          Eliminar
         </button>
       </div>
     </header>
@@ -47,13 +49,14 @@
       <label>
         Nombre
         <input name="nombre"
-          type="text" required>
+          type="text" required
+          value="Cargando…">
       </label>
     </p>
     <mi-footer></mi-footer>
   </form>
   <script type="module"
-    src="js/CtrlPasatiempoNuevo.js">
+    src="js/CtrlPasatiempo.js">
     </script>
 </body>
 </html>

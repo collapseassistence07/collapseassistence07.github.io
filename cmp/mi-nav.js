@@ -52,7 +52,7 @@ import {
           html += /* html */
             `<li>
               <a href=
-  "pasatiempos.html">Publicaciones</a>
+  "publicaciones.html">Publicaciones</a>
             </li>
             <li>
               <a href=
