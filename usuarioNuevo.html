@@ -5,7 +5,8 @@
   <meta name="viewport"
     content="width=device-width,
        initial-scale=1.0">
-  <title>Usuario Nuevo</title>
+  <link rel="icon" href="icon/collapse_icon.ico.ico">
+  <title>Suscribir Usuario</title>
   <script
     src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js">
     </script>
@@ -30,13 +31,16 @@
     src="cmp/mi-progreso.js">
     </script>
   <link rel="stylesheet"
-    href="css/estilos.css">
+    href="css/estilocollapse.css">
 </head>
 <body>
   <form name="forma">
     <mi-nav></mi-nav>
+    <div class="logocollapse">
+      <img src="logo/logo.png" width="150"alt="">
+     </div>
     <header>
-      <h1>Usuario Nuevo</h1>
+      <h1>Suscripcion</h1>
       <div class="herramientas">
         <a href="usuarios.html">
           Cancelar</a>
@@ -47,7 +51,7 @@
     </header>
     <p>
       <label>
-        Cue
+        Cuenta de Correo
         <input name="cue"
           type="email" required>
       </label>
@@ -65,7 +69,7 @@
     -->
     <p>
       <label>
-        Pasatiempo
+        Materia a suscribir
         <select
           name="pasatiempoId">
           <option>
