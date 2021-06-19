@@ -52,11 +52,11 @@ import {
           html += /* html */
             `<li>
               <a href=
-  "publicaciones.html">Publicaciones</a>
+  "materias.html">Materias</a>
             </li>
             <li>
               <a href=
-        "usuarios.html">Materias</a>
+        "publicaciones.html">Publicaciones</a>
             </li>`;
         }
         this.ul.innerHTML += html;
