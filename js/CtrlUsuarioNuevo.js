@@ -32,7 +32,7 @@ import {
       forma.addEventListener(
         "submit", guarda);
       selectPasatiempos(
-        forma.pasatiempoId, "");
+        forma.materiaId, "");
       checksRoles(listaRoles, []);
     }
   }

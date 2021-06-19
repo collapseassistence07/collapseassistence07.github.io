@@ -20,7 +20,7 @@ import {
   const daoRol = firestore.
     collection("Rol");
   const daoPasatiempo = firestore.
-    collection("Pasatiempo");
+    collection("Materia");
   const daoUsuario = firestore.
     collection("Usuario");
   
@@ -83,7 +83,7 @@ import {
       await urlStorage(doc.id));
     const pasatiempo =
       await buscaPasatiempo(
-        data.pasatiempoId);
+        data.materiaId);
     const roles =
       await buscaRoles(data.rolIds);
     const parámetros =
@@ -127,13 +127,13 @@ import {
         /**
          * @type {import(
             "./tipos.js").
-              Pasatiempo} */
+              Materia} */
         const data = doc.data();
         return (/* html */
           `${cod(data.nombre)}`);
       }
     }
-    return "-- Sin Pasatiempo --";
+    return "-- Sin Materia --";
   }
   
   /** Recupera el html de los

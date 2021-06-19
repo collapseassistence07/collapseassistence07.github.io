@@ -58,8 +58,8 @@ import {
         img.src =
           await urlStorage(id);
         selectPasatiempos(
-          forma.pasatiempoId,
-          data.pasatiempoId)
+          forma.materiaId,
+          data.materiaId)
         checksRoles(
           listaRoles, data.rolIds);
         forma.addEventListener(
