@@ -4,7 +4,7 @@
  */
 
 /**
- * @typedef {Object} Pasatiempo
+ * @typedef {Object} Materia
  * @property {string} nombre
  */
 
